@@ -6,7 +6,9 @@
         <slot name="toolbar_buttons"></slot>
       </template>
       <template>
+        <vxe-button>
 
+        </vxe-button>
       </template>
     </vxe-toolbar>
     <!--表格部分-->
@@ -43,12 +45,25 @@
         </template>
     </vxe-table>
     <!--分页部分-->
-    <vxe-pager>
-      <template></template>
+    <vxe-pager
+      border
+      :current-page.sync="curPage"
+      :page-size.sync="pageSize"
+      :total="total"
+      :layouts="[
+        'PrevPage',
+        'JumpNumber',
+        'NextPage',
+        'FullJump',
+        'Sizes',
+        'Total',
+      ]"
+      @page-change="handlePageChange"
+    >
     </vxe-pager>
   </div>
 </template>
-<script lang="scope">
+<script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import PageListData from '@/libs/http-request'
 
