@@ -1,0 +1,6 @@
+node_modules/*
+assets/*
+dist/*
+iconfont.js
+h5player.min.js
+public/*

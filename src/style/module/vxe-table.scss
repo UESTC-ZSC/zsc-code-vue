@@ -1,0 +1,29 @@
+@import 'vxe-table/styles/variable.scss';
+
+/// 修改vxe-table的默认风格
+
+$vxe-font-color: #3D4954;
+$vxe-table-background-color: blue;
+$vxe-button-default-background-color: white;
+$vxe-table-header-background-color: white;
+$vxe-table-border-color: white;
+$vxe-pager-background-color: white;
+//$vxe-input-border-color: white;
+
+.vxe-toolbar {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+@import 'vxe-table/styles/modules.scss';
+
+.vxe-button.type--button {
+    border: 0px;
+}
+
+.vxe-pager {
+    margin-top: 5px;
+    background-color: white;
+    font-weight: 400;
+}

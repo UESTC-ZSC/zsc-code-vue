@@ -1,0 +1,84 @@
+// 主布局页面的css变量定义
+/// 常用色定义
+@white: #FFFFFF;
+@gray: #F5F6F8;
+@darkgray: #707d8a;
+@lightgray: #E0E6F3;
+@black: #3D4954;
+@blue: #0C83F4;
+@bordergray: #A7A7A7;
+@titlegray: #6F7D8A;
+
+/// 主菜单
+/// 主菜单背景色
+@main-layout-main-menu-bgcolor: @white;
+/// 菜单项
+@main-layout-main-menu-item-bgcolor: @white;
+@main-layout-main-menu-item-bgcolor-select-color: @gray;
+@main-layout-main-menu-item-fontcolor: @gray;
+
+@main-layout-main-menu-item-width: 72px;
+@main-layout-main-menu-item-height: 77px;
+@main-layout-main-menu-item-radius: 5px;
+@main-layout-main-menu-item-icon-width: 25px;
+@main-layout-main-menu-item-icon-height: 25px;
+@main-layout-main-menu-item-panding:9px;
+@main-layout-main-menu-item-icon-size: 50px;
+
+@main-layout-main-menu-logo-size: 48px;
+@main-layout-main-menu-logo-radius: 50px;
+
+@main-layout-main-menu-toolpane-fontsize: 14px;
+@main-layout-main-menu-toolpane-fontcolor: @black;
+@main-layout-main-menu-toolpane-iconsize: 32px;
+@main-layout-main-menu-toolpane-userinfo-size: 39px;
+
+
+/// 子菜单
+/// 子菜单色背景色
+@main-layout-sub-menu-bgcolor: @gray;
+@main-layout-sub-menu-width: 110px;
+
+
+/// 头部
+@main-layout-head-height: 79px;
+@main-layout-head-bgimage: url('~@/assets/frame/main/head-bg.png');
+@project-layout-head-bgimage: url('~@/assets/frame/main/project-bg.png');
+/// 团队信息
+@main-layout-head-group-iconsize: 39px;
+@main-layout-head-group-radius:50px;
+@main-layout-head-group-fontcolor:@white;
+@main-layout-head-group-fontsize:14px;
+
+
+
+
+/// 面包屑
+@main-layout-breadcrumb-height: 64px;
+@main-layout-breadcrumb-bgcolor: @white;
+@main-layout-breadcrumb-font-selectcolor: @black;
+@main-layout-breadcrumb-font-unselectcolor: @lightgray;
+@main-layout-breadcrumb-panding-left: 45px;
+@main-layout-breadcrumb-icon-size: 20px;
+
+
+/// 页签条
+@main-layout-tagbar-height: 47px;
+@main-layout-tagbar-bgcolor: @white;
+@main-layout-tagbar-action-button-width: 41px;
+@main-layout-tagbar-action-button-height: 46px;
+@main-layout-tagbar-action-button-icon-size: 32px;
+@main-layout-tagbar-tag-button-bgcolor: @gray;
+
+// 图标常用色定义
+.icon_color(@icon_color){
+    color: @icon_color;
+}
+
+.icon_color_warning{
+    .icon_color(red);
+}
+
+.icon_color_normal{
+    .icon_color(@black);
+}
