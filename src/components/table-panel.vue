@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <!--表格头部-->
+  <fullscreen>
+    <!--表格头部（工具条）-->
     <vxe-toolbar>
       <template v-slot:buttons>
         <slot name="toolbar_buttons"></slot>
@@ -61,11 +61,12 @@
       @page-change="handlePageChange"
     >
     </vxe-pager>
-  </div>
+  </fullscreen>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
-import PageListData from '@/libs/http-request'
+import fullscreen from '@/components/full-screen/component.vue'
+import { PageListData } from '@/libs/http-request'
 
 /// 表格的定义参数接口
 export interface TableGridOptions {
@@ -81,7 +82,6 @@ export interface TableGridOptions {
   highlightHoverRow?: boolean
   /// 保持原始值的状态
   keepSource?: boolean
-
   /// 自定义行数据唯一主键的字段名
   rowId?: string
 
@@ -132,7 +132,10 @@ interface TableConfig {
 }
 
 @Component({
-  name: 'tablePanelPanel'
+  name: 'tablePanelPanel',
+  components: {
+    fullscreen
+  }
 })
 export default class TablePanel extends Vue {
   @Prop({
@@ -308,9 +311,9 @@ export default class TablePanel extends Vue {
    */
   gridOptions = {}
 
-  // /**
-  //  * 处理表格的配置数据
-  //  */
+  /**
+   * 处理表格的配置数据
+   */
   created () {
     this.gridOptions = _.cloneDeep(defaultGridOptions)
 
@@ -382,5 +385,10 @@ export default class TablePanel extends Vue {
 
 </script>
 <style lang="less" scoped>
-
+.toolbar_item {
+  align-items: flex-start;
+  display: block !important;
+  margin-right: 12px;
+  margin-left: 0px;
+}
 </style>
