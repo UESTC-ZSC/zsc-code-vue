@@ -315,25 +315,25 @@ export default class TablePanel extends Vue {
    * 处理表格的配置数据
    */
   created () {
-    this.gridOptions = _.cloneDeep(defaultGridOptions)
+    // this.gridOptions = _.cloneDeep(defaultGridOptions)
 
-    if (this.tableConfig.options) {
-      _.merge(this.gridOptions, this.tableConfig.options)
-    }
+    // if (this.tableConfig.options) {
+    //   _.merge(this.gridOptions, this.tableConfig.options)
+    // }
 
-    if (this.tableConfig.columns) {
-      (this.gridOptions as any).columns = this.tableConfig.columns
-    } else {
-      (this.gridOptions as any).columns = []
-    }
+    // if (this.tableConfig.columns) {
+    //   (this.gridOptions as any).columns = this.tableConfig.columns
+    // } else {
+    //   (this.gridOptions as any).columns = []
+    // }
 
-    const that = this
-    if (!(this.gridOptions as any).ajax) {
-      (this.gridOptions as any).ajax = {}
-    }
-    (this.gridOptions as any).ajax.query = () => {
-      that.$emit('on-refresh', { curPage: 1, pageSize: that.pageSize })
-    }
+    // const that = this
+    // if (!(this.gridOptions as any).ajax) {
+    //   (this.gridOptions as any).ajax = {}
+    // }
+    // (this.gridOptions as any).ajax.query = () => {
+    //   that.$emit('on-refresh', { curPage: 1, pageSize: that.pageSize })
+    // }
   }
 
   /**
@@ -385,6 +385,7 @@ export default class TablePanel extends Vue {
 
 </script>
 <style lang="less" scoped>
+// @import '~@/style/index.less';
 .toolbar_item {
   align-items: flex-start;
   display: block !important;
