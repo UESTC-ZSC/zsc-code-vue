@@ -1,5 +1,5 @@
 import { TableConfig } from '../share/table-panel'
-
+//
 const tableConfig: TableConfig = {
   options: {},
   columns: [
